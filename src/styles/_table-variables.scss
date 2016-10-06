@@ -1,0 +1,12 @@
+$table-row-height: 48px !default;
+$table-font-size: 12px !default;
+$table-row-divider: solid 1px rgba(0,0,0,.12) !default;
+$table-row-offset: 18px !default;
+$table-row-highlight: #eee !default;
+$table-text-color: #757575 !default;
+$animation-duration: .35s;
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+$table-hide-tablet-size: 768px;
+$table-hide-mobile-size: 480px;
+$table-font-size: 12px;
