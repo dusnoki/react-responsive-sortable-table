@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Table from '../src';
+require('../dist/_index.css');
 
 const tableModel = {
   code: { type: Number, hideTablet: true, sortable: true },

@@ -14,7 +14,10 @@ const TableHead = ({
   model,
   onSort,
   sortBy,
-  sortDirection
+  sortDirection,
+  sortClass,
+  sortUpClass,
+  sortDownClass
 }) => {
   const contentCells = Object.keys(model).map((key) => {
     const classes = cx({
@@ -24,15 +27,15 @@ const TableHead = ({
     });
     const name = model[ key ].title || key;
     const translatedName = humanize(name);
-    const descClass = cx('fa-icon-sort-down', {
+    const descClass = cx(sortDownClass || 'fa-icon-sort-down', {
       'hidden': !model[ key ].sortable || name !== sortBy || sortDirection !== 'desc'
     });
-    const ascClass = cx('fa-icon-sort-up', {
+    const ascClass = cx(sortUpClass || 'fa-icon-sort-up', {
       'hidden': !model[ key ].sortable || name !== sortBy || sortDirection !== 'asc'
     });
     if (model[ key ].sortable && name !== sortBy) {
       return (<th onClick={onSort.bind(this, key)} className={classes} key={key}>{translatedName}
-        <i className='fa-icon-sort'/>
+        <i className={sortClass || 'fa-icon-sort'}/>
       </th>);
     }
     return (<th onClick={onSort.bind(this, key)} className={classes} key={key}>{translatedName}
