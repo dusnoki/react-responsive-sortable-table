@@ -4,7 +4,7 @@
   "description": "A Responsive Sortable Table component built for React.js",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d dist",
+    "build": "./node_modules/.bin/babel src -d dist && node-sass src/styles/ -o dist/styles/",
     "start": "webpack-dev-server --config webpack.config.js --progress",
     "test": "mocha -w --compilers js:babel-core/register tests/helpers/browser.js tests/*.spec.js"
   },
