@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import TableHead from './TableHead';
 import TableRow from './TableRow';
-require('./styles/_index.css');
+require('./styles/_index.scss');
 
 class ResponsiveSortableTable extends Component {
   state = {
